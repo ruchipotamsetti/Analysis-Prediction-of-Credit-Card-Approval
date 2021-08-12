@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>Credit Card Approval</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{%static "css\bootstrap.css" %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: gray;
+    padding-top: 0.1px ;
+    padding-bottom:10px;
+   opacity:0.7;
+  height: 100px;
+  width:100%;
+  text-align: center;
+  font-size: 35px;
+  color:white;
+  
+}
+
+/* Style header text*/
+header h3{
+	padding-top:16px;
+
+}
+
+/* Create two columns/boxes that floats next to each other */
+
+.sidebar{
+  position: absolute;
+  left: 0;
+  width: 250px;
+  height: 800px;
+  background-color:#4682B4; 
+  }
+article {
+  float: left;
+  padding-left: 250px;
+   height: 800px; /* only for demonstration, should be removed */
+  
+ 
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#header_background{
+width:100%;
+height:100px;
+background:url("https://www.sliit.lk/wp-content/uploads/2017/11/Slider-Background.jpg");
+}
+
+
+.sider-list {
+	list-style-type: none;
+	
+	float: left;
+}
+
+.sider-list li{
+	display: inline-block;
+}
+.sider-list li a{
+	text-decoration: none;
+	color: #fff;
+	padding : 5px 20px;
+	border: 0.5px solid transparent;
+	border-radius: 15px;
+	
+	transition: 0.2s ease;
+	text-align: center;
+}
+
+.sider-list li a:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+section.team {
+        background-color: antiquewhite;
+        padding: 20px;
+    }
+
+    section.about-us {
+        background-color: #252F3D;
+        padding: 30px;
+    }
+    
+
+    section.about-us strong {
+        color: white;
+    }
+
+    ul.about-us-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    ul.about-us-links > li {
+        margin-top: 5px;
+    }
+
+    ul.about-us-links > li > a {
+        color: white;
+    }
+
+    ul.about-us-links > li > a:hover {
+        color: black;
+    }
+
+
+</style>
+</head>
+<body>
+
+<header id="header_background">
+
+        <h3 text-color="white">BANK OF PUNE</h3>
+        
+</header>
+
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+       
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a class="#" href="data">Data Analysis</a></li>
+        <li><a class="#" href="predict">Prediction Analysis</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <marquee Style="font-size:20px; color:black;">Welcome to <b Style="color:red">Bank of PUNE </b> portal !!!</marquee>
+  <!--
+   <img src="./images/credit2.jpg" height=400px width="100%" Style="padding-top: 5px;padding-left:20px;padding-right:20px">
+   -->
+  <div class="w3-content w3-section" >
+	  <img class="mySlides w3-animate-left" src="{% static "images\creditcard1.jpg" %}" height=400px width="100%" Style="padding-top: 5px;padding-left:20px;padding-right:20px">
+	  <img class="mySlides w3-animate-left" src="{% static "images\creditcard2.jpg" %}" height=400px width="100%" Style="padding-top: 5px;padding-left:20px;padding-right:20px">
+	  <img class="mySlides w3-animate-left" src="{% static "images\creditcard3.jpg" %}" height=400px width="100%" Style="padding-top: 5px;padding-left:20px;padding-right:20px">
+  </div>
+  
+  <script>
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  setTimeout(carousel, 4000); // Change image every 4 seconds
+	}
+  </script>
+  
+  
+   <br> 
+   <div>
+        <p style="text-align: center;">
+
+            <h1 style="text-align: center;"> <B>Analysis and Prediction of Credit Card Approval</B></h1>
+       <h3 style="text-align: center;"> It is a project developed in order to help banks shortlist the list of suitable candidates for credit card approval from the hundreds of applications that they receive. Credit card approval predictor analyzes user input and using an optimum machine model will decide whether  the candidate should be approved or not. Banking industries receive so many applications for credit card request. Going through each request manually can be very time consuming, also prone to human errors. However, we can use the historical data to build a model which can shortlist the candidates for approval.</h3>
+        </p>
+  </div>
+  <br>
+  <br>
+
+
+   <!-- <div class="container"> -->
+    <section class="team">
+
+        <div ><h3 style="text-align: center;padding-right:60px;"><B>Team</B></h3></div>
+        <div class="row">
+            <div class="col-md-4" style="padding-left: 200px;">
+                <img class="img-circle" style="width: 200px;height: 200px;" src="{% static "images\sona1.jpg" %}" alt=""><br><br>
+                <div class="text-left">
+                     <strong Style="padding-left: 75px; padding-top:30px">Sanhita Patil</strong>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left: 100px;">
+                <img class="img-circle"  style="width: 200px;height: 200px; " src="{% static "images\ruchita1.jpg" %}" alt=""><br><br>
+                <div class="text-left">
+                    <strong Style="padding-left: 60px; padding-top:30px">Ruchita Potamsetti </strong>
+               </div>
+            </div>
+            <div class="col-md-4" style="padding-right: 200px;">
+                <img class="img-circle"  style="width: 200px;height: 200px;" src="{% static "images\vaishnavi.jpeg" %}" alt=""><br><br>
+                <div class="text-left">
+                    <strong Style="padding-left: 60px; padding-top:30px">Vaishnodevi Ghodake</strong>
+               </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div>
+        <p></p>
+
+    </div>
+
+
+    <!-- footer -->
+    <section class="about-us"> 
+        <div class="row">
+
+            <div class="col-md-4" Style="padding-left: 40px;">
+                <h4 style="padding-left:30px;"> <strong>Get To Know Us</strong></h4>
+                <ul class="about-us-links">
+                    <li style="padding-left:40px ;"><a href="home"> About Us</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-md-4" >
+               <h4 style="padding-left:25px ;"> <strong>Connect with Us</strong></h4>
+            <div style="padding-left: 70px;">
+                <img class="img-circle" Style="width:30px; height: 30px" src="{% static "images\mail.webp" %}"  alt="">
+            </div>   
+                <ul class="about-us-links">
+                    <li><a href=""> sanhitapatil20000@gmail.com</a></li>
+                    <li><a href=""> potamsettiruchita@gmail.com </a></li>
+                    <li><a href=""> vaishnodevighodake10@gmail.com</a></li>
+                   
+                </ul>
+            </div>
+
+            
+
+            
+        </div>
+   
+</section>
+
+
+
+</head>
+
+</html>
